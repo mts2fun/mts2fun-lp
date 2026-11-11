@@ -196,7 +196,13 @@ dd{font-weight:700}
 dd small{display:block;font-weight:500;font-size:.82rem}
 .note{font-size:.8rem;margin-top:16px;text-align:center}
 .links{display:grid;gap:14px;margin-top:30px}
-.mono-link{max-width:520px;margin:0 auto 30px}
+.mono-link{max-width:340px;margin:0 auto 34px}
+.mono-card{display:block;text-decoration:none;color:inherit;position:relative}
+.mono-card .polaroid{display:block;position:relative;padding:8px 8px 10px;transform:rotate(-2deg);transition:transform .2s}
+.mono-card .polaroid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:sepia(.28) saturate(.92) contrast(1.04)}
+.mono-card .cap{display:block;text-align:center;font-family:var(--display);font-weight:700;font-size:1rem;padding-top:8px;line-height:1.35}
+.mono-card .btn{margin-top:18px}
+.mono-card:hover .polaroid,.mono-card:focus-visible .polaroid{transform:rotate(0)}
 .sub{font-size:.85rem;text-align:center;margin-top:4px}
 
 footer{margin-top:20px;text-align:center;font-size:.75rem;padding:0 20px 36px}
@@ -240,7 +246,7 @@ footer .stripe{margin-bottom:26px}
   <section class="sec" aria-labelledby="g">
     <div class="wrap">
       <h2 id="g" lang="en">Our Workshop</h2>
-      <p class="mono-link"><a class="btn red" href="https://mts2fun.github.io/mono/color/" target="_blank" rel="noopener">-mono- 着物リメイクのアロハシャツ<span class="en" lang="en">-mono- Kimono-remade aloha shirts</span></a></p>
+      <p class="mono-link"><a class="mono-card" href="https://mts2fun.github.io/mono/color/" target="_blank" rel="noopener"><span class="polaroid"><span class="tape" aria-hidden="true"></span><img src="assets/mono.jpg" alt="着物をリメイクしたピンク色のアロハシャツ / Pink aloha shirt remade from a kimono" width="498" height="622"><span class="cap">出品予定品<span class="en" lang="en">Planned for the booth</span></span></span><span class="btn red">-mono- 着物リメイクのアロハシャツ<span class="en" lang="en">-mono- Kimono-remade aloha shirts</span></span></a></p>
       <ul class="gallery">
         <li><div class="polaroid"><img loading="lazy" src="assets/p1.jpg" alt="作業場のミシン / Sewing machine at the workshop" width="498" height="600"></div></li>
         <li><div class="polaroid"><img loading="lazy" src="assets/p2.jpg" alt="デニムにボタンを付ける手元 / Sewing a button onto denim" width="498" height="612"></div></li>
