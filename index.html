@@ -39,7 +39,7 @@
     "ja",
     "en"
    ],
-   "dateModified": "2026-11-10",
+   "dateModified": "2026-11-11",
    "about": {
     "@id": "https://mts2fun.github.io/mts2fun-lp/#event"
    },
@@ -104,12 +104,12 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Reggae+One&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@700&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#f1e6cc; --paper-2:#e8d9b6; --ink:#2b2118;
   --red:#b8402f; --mustard:#d8a032; --teal:#2f6b68; --white:#fffaf0;
-  --display:"Reggae One","Hiragino Mincho ProN","Yu Mincho",serif;
+  --display:"Kaisei Decol","Hiragino Mincho ProN","Yu Mincho",serif;
   --body:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
 }
 *{box-sizing:border-box;margin:0}
@@ -139,7 +139,8 @@ h2 .en{margin-top:2px}
 dt .en{font-size:.68rem;opacity:.9;letter-spacing:0}
 .logo{font-family:var(--display);font-size:clamp(3.2rem,16vw,5.2rem);line-height:1.05;margin:14px 0 4px;color:var(--red);
   text-shadow:3px 3px 0 var(--mustard)}
-.p{font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;font-weight:700}
+.p{font-family:inherit;font-weight:inherit}
+.logo,.stamp,.date-line,.event{font-weight:700}
 .tagline{font-size:.95rem}
 .trade{margin-top:8px;font-weight:700;font-size:.9rem;letter-spacing:.1em;line-height:1.5}
 .label{display:inline-block;margin-top:14px;padding:5px 16px;background:var(--teal);color:var(--paper);border:2px dashed var(--paper);outline:2px solid var(--teal);border-radius:4px;font-size:.7rem;letter-spacing:.16em;font-weight:700;line-height:1.4}
@@ -158,7 +159,7 @@ dt .en{font-size:.68rem;opacity:.9;letter-spacing:0}
 
 /* 見出し */
 .sec{padding:44px 0}
-h2{font-family:var(--display);font-weight:400;font-size:1.5rem;text-align:center;margin-bottom:26px;position:relative}
+h2{font-family:var(--display);font-weight:700;font-size:1.5rem;text-align:center;margin-bottom:26px;position:relative}
 h2::after{content:"";display:block;width:64px;height:6px;margin:8px auto 0;
   background:repeating-linear-gradient(90deg,var(--red) 0 8px,transparent 8px 12px)}
 
@@ -195,6 +196,13 @@ dd{font-weight:700}
 dd small{display:block;font-weight:500;font-size:.82rem}
 .note{font-size:.8rem;margin-top:16px;text-align:center}
 .links{display:grid;gap:14px;margin-top:30px}
+.mono-link{max-width:340px;margin:0 auto 34px}
+.mono-card{display:block;text-decoration:none;color:inherit;position:relative}
+.mono-card .polaroid{display:block;position:relative;padding:8px 8px 10px;transform:rotate(-2deg);transition:transform .2s}
+.mono-card .polaroid img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;filter:sepia(.28) saturate(.92) contrast(1.04)}
+.mono-card .cap{display:block;text-align:center;font-family:var(--display);font-weight:700;font-size:1rem;padding-top:8px;line-height:1.35}
+.mono-card .btn{margin-top:18px}
+.mono-card:hover .polaroid,.mono-card:focus-visible .polaroid{transform:rotate(0)}
 .sub{font-size:.85rem;text-align:center;margin-top:4px}
 
 footer{margin-top:20px;text-align:center;font-size:.75rem;padding:0 20px 36px}
@@ -237,7 +245,8 @@ footer .stripe{margin-bottom:26px}
 <main>
   <section class="sec" aria-labelledby="g">
     <div class="wrap">
-      <h2 id="g">ものづくりの現場<span class="en" lang="en">Our Workshop</span></h2>
+      <h2 id="g" lang="en">Our Workshop</h2>
+      <p class="mono-link"><a class="mono-card" href="https://mts2fun.github.io/mono/color/" target="_blank" rel="noopener"><span class="polaroid"><span class="tape" aria-hidden="true"></span><img src="assets/mono.jpg" alt="着物をリメイクしたピンク色のアロハシャツ / Pink aloha shirt remade from a kimono" width="498" height="622"><span class="cap">出品予定品<span class="en" lang="en">Planned for the booth</span></span></span><span class="btn red">-mono- 着物リメイクのアロハシャツ<span class="en" lang="en">-mono- Kimono-remade aloha shirts</span></span></a></p>
       <ul class="gallery">
         <li><div class="polaroid"><img loading="lazy" src="assets/p1.jpg" alt="作業場のミシン / Sewing machine at the workshop" width="498" height="600"></div></li>
         <li><div class="polaroid"><img loading="lazy" src="assets/p2.jpg" alt="デニムにボタンを付ける手元 / Sewing a button onto denim" width="498" height="612"></div></li>
